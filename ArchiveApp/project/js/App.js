@@ -1,6 +1,23 @@
 import userEl from "./components/Users.js";
 import { createEl, querySe, log } from "./helpers.js";
 
+const listElGen = () => {
+  const listEl = document.createElement("ul");
+
+  listEl.className = "contact-list";
+
+  return listEl;
+};
+
+const listItemElGen = (itemContent) => {
+  const listItemEl = document.createElement("li");
+
+  listItemEl.className = "contact-item";
+  listItemEl.textContent = itemContent;
+
+  return listItemEl;
+};
+
 let items;
 const rootEl = querySe(".root");
 const buttonEl = createEl("button");
