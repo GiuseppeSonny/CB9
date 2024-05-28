@@ -1,7 +1,7 @@
 import "./Task.css";
 
-const Task = ({ text }) => {
-  return <li className="task">{text}</li>;
+const Task = ({ textProp }) => {
+  return <li className="task">{textProp}</li>;
 };
 
 export default Task;

@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "edge-commerce",
-=======
-  "name": "ecommerce-react",
->>>>>>> 092761e0d310592b829eae0cf35f150793e386fa
+  "name": "netflixprova-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",

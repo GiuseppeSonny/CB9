@@ -5,7 +5,7 @@ const productCardGen = (productData) => {
 
   productEl.className = "product--card";
   imageEl.src = productData.thumbnail;
-  imageEl.arl = productData.title;
+  imageEl.alt = productData.title;
   priceEl.textContent = productData.price;
 
   productEl.append(imageEl, priceEl);
