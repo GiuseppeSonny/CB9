@@ -1,10 +1,19 @@
 import { useState } from "react";
+import { nanoid } from "nanoid";
+import "./AddTask.css";
 
+/**
+ *
+ * @function AddTask Componente che aggiungerà le task alla todo-list
+ * @param {Function} setTasks funzione setState che muterà lo stato della todo list (tasks)
+ * @param {Array} tasks la nostra todo list, necessaria per leggere il valore precedente
+ *
+ */
 const AddTask = ({ setTasks = () => {}, tasks = [] }) => {
   const [inputValue, setInputValue] = useState("");
 
   return (
-    <div>
+    <form type="submit">
       <input
         type="text"
         className="input-task"
@@ -15,14 +24,15 @@ const AddTask = ({ setTasks = () => {}, tasks = [] }) => {
       />
       <button
         className="button-task"
-        type="button"
-        onClick={() => {
-          setTasks([...tasks, inputValue]);
+        type="submit"
+        onClick={(e) => {
+          e.preventDefault();
+          setTasks([...tasks, { id: nanoid(), text: inputValue }]);
         }}
       >
         Insert
       </button>
-    </div>
+    </form>
   );
 };
 
