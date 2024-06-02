@@ -6,7 +6,7 @@ const NavigationItem = ({
   className = "navigation-item",
 }) => {
   return (
-    <li className={className}>
+    <li onClick={handleClick} className={className}>
       <a href={link}>{isAtctive ? <strong>text</strong> : text}</a>
     </li>
   );

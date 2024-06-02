@@ -1,19 +1,6 @@
-const MovieCard = ({
-  handleMouseEnter,
-  handleMouseLeave,
-  image,
-  match,
-  rating,
-  duration,
-  categories,
-  isActive = false,
-}) => {
+const movieDetail = ({ image, match, rating, duration, categories = [] }) => {
   return (
-    <article
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="movie-card"
-    >
+    <div>
       <img src={image} alt={""} className="movie_card" />
       {isActive ? (
         <div>
@@ -22,7 +9,8 @@ const MovieCard = ({
           <section className="categories">categories</section>
         </div>
       ) : null}
-    </article>
+    </div>
   );
 };
-export default MovieCard;
+
+export default movieDetail;
