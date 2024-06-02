@@ -1,0 +1,25 @@
+.input-form {
+  outline: none;
+  padding: 8px;
+  border-radius: 2px;
+  background-color: rgb(255, 229, 191);
+  margin-right: 8px;
+  font-family: "Raleway";
+}
+
+.insert-button {
+  content: "+";
+  background-color: #fac001;
+  color: #000000;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px;
+  border: 1px solid black;
+}
+
+.insert-button:hover {
+  background-color: rgb(216, 63, 63);
+}

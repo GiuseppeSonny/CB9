@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Raleway", cursive;
+}
+
+.main-title {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  font-size: 3rem;
+  color: #000000;
+  font-family: "raleway", cursive;
+}
+
+.subtitle {
+  display: block;
+  align-items: center;
+  justify-items: center;
+  color: #2afd00;
+}

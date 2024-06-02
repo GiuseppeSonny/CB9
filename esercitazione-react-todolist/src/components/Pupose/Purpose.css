@@ -1,0 +1,54 @@
+.purpose {
+  list-style: none;
+  font-size: 1.4rem;
+  color: #000000;
+  padding: 10px;
+  border: 1px solid #000000;
+  background-color: #c1eee8;
+  margin: 5px;
+  line-height: 1.5;
+  font-family: Verdana;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purpose:hover {
+  background-color: #27d44c8e;
+}
+
+.checkbox {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+}
+
+.checkbox:hover {
+  border-color: #ff0000;
+}
+.xbutton {
+  border: 1px solid #000000;
+  cursor: pointer;
+  background-color: rgb(248, 92, 92);
+  color: #000000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  font-family: "Raleway";
+  font-size: 1rem;
+}
+
+.xbutton:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .purpose {
+    font-size: 1.2rem;
+  }
+}
