@@ -1,7 +1,7 @@
 import styles from "./modal.module.scss";
 import { IoIosCloseCircle } from "react-icons/io";
 
-const Modal = () => {
+const Modal = ({ handleCloseClick }) => {
   return (
     <div className={styles.modalContainer}>
       <div className={styles.modalWindow}>
@@ -13,7 +13,10 @@ const Modal = () => {
           <img src="https://picsum.photos/200/300" alt="" />
         </div>
         <div className={styles.modalFooter}>
-          <IoIosCloseCircle className={styles.modalBtn} />
+          <IoIosCloseCircle
+            className={styles.modalBtn}
+            onClick={handleCloseClick}
+          />
         </div>
       </div>
     </div>

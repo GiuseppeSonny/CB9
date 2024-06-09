@@ -51,7 +51,7 @@ const Carousel = ({ list = [] }) => {
               title={movie.original_title}
               imgUrl={movie.backdrop_path}
               key={index}
-              handleClick={() => console.log("cliccato", movie)}
+              movie={movie}
             />
           );
         })}
