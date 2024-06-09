@@ -6,6 +6,13 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.218);
 }
 
+.maintitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
 .menuList {
   display: flex;
   gap: 8px;

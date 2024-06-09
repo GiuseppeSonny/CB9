@@ -11,21 +11,36 @@
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.471);
   backdrop-filter: blur(4px);
-  color: red;
+  color: rgb(0, 0, 0);
   font-size: 5rem;
+}
+
+.modalHeader {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.movieDescription {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid red;
 }
 
 .modalWindow {
   height: 600px;
-  width: 600px;
+  width: 70%;
   border-radius: 12px;
   background-color: whitesmoke;
 
   @include mixins.desktop() {
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
     height: 600px;
     width: 600px;
+    font-size: 8px !important;
   }
 
   img {

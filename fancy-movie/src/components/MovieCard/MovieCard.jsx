@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "../modal/modal";
 import styles from "./moviecard.module.scss";
 const MovieCard = ({ title = "Movie Title", imgUrl, refProp, movie }) => {
-  const [isModalVisible, setIsModalVisible] = useState();
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleClick = () => {
     setIsModalVisible(true);

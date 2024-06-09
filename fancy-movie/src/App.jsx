@@ -4,7 +4,6 @@ import HeroComponent from "./components/Hero/HeroComponent.jsx";
 import { useEffect, useState } from "react";
 import Carousel from "./components/carousel/carousel.jsx";
 import { API_Key } from "../constant.js";
-import MovieCard from "./components/MovieCard/MovieCard.jsx";
 function App() {
   const [popularList, setPopularList] = useState([]);
 
@@ -29,6 +28,12 @@ function App() {
         imageUrl={popularList[0]?.backdrop_path}
         title={popularList[0]?.original_title}
       />
+      <section className={styles.carouselSection}>
+        <Carousel list={popularList} />
+      </section>
+      <section className={styles.carouselSection}>
+        <Carousel list={popularList} />
+      </section>
       <section className={styles.carouselSection}>
         <Carousel list={popularList} />
       </section>
