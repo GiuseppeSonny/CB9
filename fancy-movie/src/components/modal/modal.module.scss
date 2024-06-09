@@ -1,0 +1,46 @@
+@use "../../assets/mixins";
+
+.modalContainer {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.471);
+  backdrop-filter: blur(4px);
+  color: red;
+  font-size: 5rem;
+}
+
+.modalWindow {
+  height: 600px;
+  width: 600px;
+  border-radius: 12px;
+  background-color: whitesmoke;
+
+  @include mixins.desktop() {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 600px;
+    width: 600px;
+  }
+
+  img {
+    height: 40%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .modalBtn {
+    position: absolute;
+    top: 0;
+    width: max-content;
+    right: 0;
+    color: whitesmoke;
+    border: 1px solid red;
+    font-size: 1.2rem;
+  }
+}

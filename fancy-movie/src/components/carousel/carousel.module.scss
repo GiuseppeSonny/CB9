@@ -1,0 +1,42 @@
+@use "../../assets/mixins.scss";
+
+.carouselContainer {
+  position: relative;
+  width: 90vw;
+  .arrowsContainer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+
+    @include mixins.desktop() {
+      display: flex;
+    }
+
+    .genericIcon {
+      font-size: 2.5rem;
+      color: whitesmoke;
+      cursor: pointer;
+      filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.389));
+      pointer-events: all;
+    }
+  }
+
+  .carousel {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    overflow: scroll;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
