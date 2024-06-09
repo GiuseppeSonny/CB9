@@ -6,6 +6,7 @@ import Carousel from "./components/carousel/carousel.jsx";
 import { API_Key } from "../constant.js";
 function App() {
   const [popularList, setPopularList] = useState([]);
+  const [upcoming, setUpcomingList] = useState([]);
 
   useEffect(() => {
     fetch("https://api.themoviedb.org/3/movie/popular", {
@@ -16,23 +17,28 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setPopularList(data.results);
       });
-    console.log(popularList);
+    fetch("https://api.themoviedb.org/3/movie/upcoming", {
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${API_Key}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setUpcomingList(data.results);
+      });
   }, []);
   return (
     <main className={styles.mainContainer}>
       <Navbar />
-      <HeroComponent
-        imageUrl={popularList[0]?.backdrop_path}
-        title={popularList[0]?.original_title}
-      />
+      <HeroComponent />
       <section className={styles.carouselSection}>
         <Carousel list={popularList} />
       </section>
       <section className={styles.carouselSection}>
-        <Carousel list={popularList} />
+        <Carousel list={upcoming} />
       </section>
       <section className={styles.carouselSection}>
         <Carousel list={popularList} />
