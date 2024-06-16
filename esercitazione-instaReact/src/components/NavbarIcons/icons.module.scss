@@ -1,0 +1,31 @@
+.navbarIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.threadIcon {
+  color: white;
+  padding: 6px;
+  float: right;
+  width: 20px;
+  height: 30px;
+  justify-content: flex-end;
+}
+
+.listIcon {
+  color: white;
+  padding: 6px;
+  float: right;
+  width: 20px;
+  height: 30px;
+  justify-content: flex-end;
+}
+
+.plusIcon {
+  color: white;
+  padding: 6px;
+  float: right;
+  width: 20px;
+  height: 30px;
+}
