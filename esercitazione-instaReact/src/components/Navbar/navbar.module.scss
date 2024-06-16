@@ -1,5 +1,18 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
 .username {
-  border: 1px solid red;
   color: white;
   padding: 10px;
+}
+
+.arrowIcon {
+  display: flex;
+  color: white;
+  float: right;
+  padding: 4px;
+  width: 10px;
+  height: 20px;
 }
