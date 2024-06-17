@@ -1,0 +1,12 @@
+@use "../../assets/mixins.scss";
+
+.postcarousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+
+  @include mixins.desktop() {
+    display: flex;
+  }
+}

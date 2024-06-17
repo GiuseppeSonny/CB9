@@ -1,10 +1,11 @@
-@mixin cardDimension($width: 300px, $height: 200px, $color: rgb(12, 6, 58)) {
+@mixin PostDimension($width: 300px, $height: 200px, $color: rgb(12, 6, 58)) {
   width: $width;
   height: $height;
   border-radius: 4px;
   color: $color;
   box-shadow: 0 0 6px $color;
   flex: 0 0 auto;
+  margin: 10px;
 }
 
 @mixin desktop {

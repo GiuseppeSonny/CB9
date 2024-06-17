@@ -1,7 +1,9 @@
 .logo {
-  display: flex;
-  fill: rgb(85, 85, 226);
-  border: 1px solid red;
   height: 100px;
   width: 200px;
+  margin: 0;
+  padding: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
