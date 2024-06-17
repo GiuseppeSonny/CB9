@@ -3,6 +3,7 @@ import { API_KEY } from "../constants/constant";
 import styles from "./app.module.scss";
 import NavBar from "./components/Navbar/Navbar.jsx";
 import PostCarousel from "./components/PostCarousel/PostCarousel.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 const BASE_URL = "https://api.unsplash.com/photos/";
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <main className={styles.mainPage}>
       <NavBar />
       <PostCarousel list={images} />
+      <Footer />
     </main>
   );
 }
