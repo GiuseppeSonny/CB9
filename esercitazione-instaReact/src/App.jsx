@@ -4,15 +4,16 @@ import styles from "./app.module.scss";
 import NavBar from "./components/Navbar/Navbar.jsx";
 import PostCarousel from "./components/PostCarousel/PostCarousel.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import SearchInput from "./components/SearchBar/SearchBar.jsx";
 export const globalApp = createContext();
 
 const BASE_URL = "https://api.unsplash.com/photos/";
 function App() {
   const [images, setImages] = useState([]);
-  const [filter, setImagesfilter] = useState("");
+  const [filter, setfilter] = useState("");
   const value = {
     filter,
-    setImagesfilter,
+    setfilter,
   };
 
   useEffect(() => {
@@ -24,7 +25,9 @@ function App() {
   useEffect(() => {
     if (filter) {
       setImages(
-        images.filter((image) => image.alt_description.includes(filter))
+        images.filter((image) =>
+          image.alt_description.toLowerCase().startsWith(filter.toLowerCase())
+        )
       );
     } else {
       setImages(images);
@@ -36,6 +39,7 @@ function App() {
       <globalApp.Provider value={value}>
         <main className={styles.mainPage}>
           <NavBar />
+          <SearchInput onSearch={setfilter} />
           <PostCarousel list={images} />
           <Footer />
         </main>
