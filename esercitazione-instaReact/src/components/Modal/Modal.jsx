@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import Post from "../Post/post";
 import { useContext } from "react";
 import { globalApp } from "../../Layouts/layouts";
+import { FaRegHeart } from "react-icons/fa6";
+import { FaRegComment } from "react-icons/fa";
+import { TbLocationShare } from "react-icons/tb";
+import { GoBookmark } from "react-icons/go";
 
 const Modal = ({ handleCloseClick }) => {
   const navigate = useNavigate();
@@ -19,18 +23,28 @@ const Modal = ({ handleCloseClick }) => {
         ) : (
           fetchedImages.map((item, index) => (
             <div className={styles.post} key={index}>
+              <p className={styles.userName}>{item.user.username}</p>
               <Link
                 to={`/modalPage/${item.id}`}
                 onClick={() => navigate(`/modalPage/${item.id}`)}
               >
                 <Post
+                  className={styles.postimage}
                   key={index}
                   image={item.urls.small}
-                  title={item.alt_description.title}
                   alt={item.alt_description.title || "Image description"}
                 />
-                <div>
-                  <p>{item.user.username}</p> <p>{item.likes}</p>
+                <div className={styles.mainDetail}>
+                  <p className={styles.likes}> Piace a {item.likes} persone</p>
+                  <p className={styles.description}>{item.alt_description}</p>
+                </div>
+                <div className={styles.posticons}>
+                  <FaRegHeart />
+                  <FaRegComment />
+                  <TbLocationShare />
+                </div>
+                <div className={styles.bookicon}>
+                  <GoBookmark />
                 </div>
               </Link>
             </div>
