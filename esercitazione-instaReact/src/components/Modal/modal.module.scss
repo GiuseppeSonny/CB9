@@ -1,6 +1,5 @@
-.modalCarousel {
+.modalContainer {
   display: flex;
-  align-items: column;
-  border: 2px solid red;
-  background-color: antiquewhite;
+  flex-direction: column;
+  align-items: center;
 }

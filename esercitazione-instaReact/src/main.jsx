@@ -4,16 +4,20 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Modal from "./components/Modal/Modal.jsx";
+import Layout from "./Layouts/layouts.jsx";
 //import PostCarousel from "./components/PostCarousel/PostCarousel.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-  },
-  {
-    path: "/modalPage/:id",
-    element: <Modal />,
+    element: <Layout />,
+    children: [
+      { path: "/", element: <App /> },
+      {
+        path: "/modalPage/:id",
+        element: <Modal />,
+      },
+    ],
   },
 ]);
 

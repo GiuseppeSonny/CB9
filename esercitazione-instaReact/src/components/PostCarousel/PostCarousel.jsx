@@ -1,37 +1,14 @@
 import styles from "./postcarousel.module.scss";
 import Post from "../Post/post";
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { API_KEY } from "../../../constants/constant";
-
+import { globalApp } from "../../Layouts/layouts";
 const BASE_URL = "https://api.unsplash.com/photos/";
 
 const PostCarousel = ({ list = [] }) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [fetchedImages, setFetchedImages] = useState([]);
   const navigate = useNavigate();
-
-  const fetchData = async () => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(
-        `${BASE_URL}?client_id=${API_KEY}&per_page=30`
-      );
-      if (!response.ok) {
-        throw new Error(`Failed to fetch data: ${response.statusText}`);
-      }
-      const data = await response.json();
-      setFetchedImages(data);
-    } catch (error) {
-      //console.error("Error fetching data:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const { fetchedImages, isLoading } = useContext(globalApp);
 
   return (
     <>
