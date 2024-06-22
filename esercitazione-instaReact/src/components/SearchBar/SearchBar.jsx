@@ -4,16 +4,15 @@ import { globalApp } from "../../App";
 
 const SearchInput = ({ onSearch }) => {
   const [searchValue, setSearchValue] = useState("");
+  const { filter, setImagesfilter } = useContext(globalApp);
 
   const handleInputChange = (event) => {
     setSearchValue(event.target.value);
   };
 
   const handleSearch = () => {
-    onSearch(searchValue);
+    onSearch(setImagesfilter);
   };
-
-  const { filter, setImagesfilter } = useContext(globalApp);
 
   return (
     <div className={styles.searchContainer}>
