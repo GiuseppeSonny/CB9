@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (filter) {
+    if (filter.trim()) {
       setImages(
         images.filter((image) =>
           image.alt_description.toLowerCase().startsWith(filter.toLowerCase())
@@ -32,14 +32,14 @@ function App() {
     } else {
       setImages(images);
     }
-  }, [images, setImages]);
+  }, [images, filter]);
 
   return (
     <>
       <globalApp.Provider value={value}>
         <main className={styles.mainPage}>
           <NavBar />
-          <SearchInput onSearch={setfilter} />
+          <SearchInput onSearch={setImages} />
           <PostCarousel list={images} />
           <Footer />
         </main>
