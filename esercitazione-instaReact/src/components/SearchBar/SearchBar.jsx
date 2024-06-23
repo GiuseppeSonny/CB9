@@ -6,26 +6,18 @@ const SearchInput = ({ onSearch }) => {
   const [searchValue, setSearchValue] = useState("");
   const { filter, setImagesfilter } = useContext(globalApp);
 
-  /*   const handleInputChange = (event) => {
-    setSearchValue(event.target.value);
-  };
- */
-  /* const handleSearch = () => {
-    onSearch(setImagesfilter);
-  }; */
-
   return (
     <div className={styles.searchContainer}>
       <input
         className={styles.input}
         type="text"
-        //value={searchValue}
-        value={filter}
-        //onChange={handleInputChange}
+        value={filter ? filter : searchValue}
         onChange={(e) => {
           e.preventDefault();
           const input = e.target.value;
-          setImagesfilter(input);
+          setSearchValue(input);
+          console.log(input);
+          onSearch(setImagesfilter);
         }}
         placeholder="Search Post"
       />
