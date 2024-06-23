@@ -16,8 +16,8 @@ const SearchInput = ({ onSearch }) => {
           e.preventDefault();
           const input = e.target.value;
           setSearchValue(input);
-          console.log(input);
-          onSearch(setImagesfilter);
+          console.log(setImagesfilter);
+          //onSearch(setImagesfilter);
         }}
         placeholder="Search Post"
       />

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useState, useEffect, createContext } from "react";
-import { API_KEY } from "../../constants/constant";
 import Footer from "../components/Footer/Footer";
+import { API_KEY } from "../../constants/constant";
 export const globalApp = createContext();
 
 const Layout = () => {

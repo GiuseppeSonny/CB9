@@ -9,7 +9,7 @@ import { FaRegComment } from "react-icons/fa";
 import { TbLocationShare } from "react-icons/tb";
 import { GoBookmark } from "react-icons/go";
 
-const Modal = ({ handleCloseClick }) => {
+const Modal = ({}) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/");
@@ -52,11 +52,8 @@ const Modal = ({ handleCloseClick }) => {
         )}
       </div>
 
-      <button onClick={handleCloseClick} className={styles.closeButton}>
+      <button onClick={handleClick} className={styles.closeButton}>
         X
-      </button>
-      <button onClick={handleClick} className={styles.homeButton}>
-        Home
       </button>
     </div>
   );
