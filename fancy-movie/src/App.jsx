@@ -3,11 +3,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import HeroComponent from "./components/Hero/HeroComponent.jsx";
 import { useEffect, useState } from "react";
 import Carousel from "./components/carousel/carousel.jsx";
-<<<<<<< HEAD
 import { API_Key } from "../costant.js";
-=======
-import { API_Key } from "../constant.js";
->>>>>>> 9c26d97293fc90cca1e849913e9590a68180bab4
 function App() {
   const [popularList, setPopularList] = useState([]);
   const [upcoming, setUpcomingList] = useState([]);

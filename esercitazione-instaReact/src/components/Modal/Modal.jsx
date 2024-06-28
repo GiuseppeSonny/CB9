@@ -28,12 +28,14 @@ const Modal = ({}) => {
                 to={`/modalPage/${item.id}`}
                 onClick={() => navigate(`/modalPage/${item.id}`)}
               >
+                <div className={styles.postimage}>
                 <Post
-                  className={styles.postimage}
+      
                   key={index}
                   image={item.urls.small}
                   alt={item.alt_description.title || "Image description"}
                 />
+                </div>
                 <div className={styles.mainDetail}>
                   <p className={styles.likes}> Piace a {item.likes} persone</p>
                   <p className={styles.description}>{item.alt_description}</p>

@@ -17,16 +17,17 @@
   background-color: #000000;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  .postimage {
-    width: 100%;
-    height: auto !important;
-  }
+  border: 2px solid #f5e8e8;
+ 
+}
+.postimage {
+  border: 2px solid red;
 }
 
 .postLink {
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #f2e2e2;
 }
 
 .loading {
@@ -37,6 +38,7 @@
 .userName {
   font-weight: bold;
   padding: 5px 10px;
+  color: #ffffff;
 }
 
 .likes {
@@ -85,3 +87,4 @@
   color: #fff;
   font-size: 24px;
 }
+
