@@ -1,26 +1,21 @@
-import { useState, useEffect } from "react";
-import { API_KEY } from "../constants/constant";
+import { useContext } from "react";
 import styles from "./app.module.scss";
 import NavBar from "./components/Navbar/Navbar.jsx";
 import PostCarousel from "./components/PostCarousel/PostCarousel.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import SearchInput from "./components/SearchBar/SearchBar.jsx";
+import { globalApp } from "./Layouts/layouts.jsx";
 
-const BASE_URL = "https://api.unsplash.com/photos/";
 function App() {
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    fetch(`${BASE_URL}?client_id=${API_KEY}&per_page=30`)
-      .then((res) => res.json())
-      .then((data) => setImages(data));
-  }, []);
+  const { photos } = useContext(globalApp);
 
   return (
-    <main className={styles.mainPage}>
-      <NavBar />
-      <PostCarousel list={images} />
-      <Footer />
-    </main>
+    <>
+      <main className={styles.mainPage}>
+        <NavBar />
+        <SearchInput />
+        <PostCarousel list={photos} />
+      </main>
+    </>
   );
 }
 
